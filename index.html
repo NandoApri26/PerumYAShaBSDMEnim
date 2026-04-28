@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="light" lang="id">
+<html class="light scroll-smooth scroll-pt-20" lang="id">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+
   <!-- SEO Primary Meta Tags -->
   <title>Perumahan YASha BSD Muara Enim | Rumah Modern Siap Huni</title>
   <meta name="title" content="Perumahan YASha BSD Muara Enim | Rumah Modern Siap Huni">
@@ -12,7 +12,7 @@
   <meta name="keywords" content="Perumahan Muara Enim, Rumah Siap Huni Muara Enim, YASha BSD Muara Enim, Jual Rumah Muara Enim, Properti Muara Enim, Investasi Rumah Muara Enim, Rumah Baru Muara Enim">
   <meta name="author" content="Perumahan YASha BSD">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://contohyashabsd.com/">
@@ -37,6 +37,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -173,13 +174,13 @@
   <nav
     class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-emerald-950/80 backdrop-blur-xl border-b border-white/10 shadow-sm transition-all">
     <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-      <div class="text-xl font-serif font-bold text-emerald-900 dark:text-amber-400">
+      <div class="text-lg font-serif font-bold text-emerald-900 dark:text-amber-400">
         <a class="text-emerald-800/70 dark:text-emerald-100/70 hover:text-amber-500 transition-colors duration-300"
            href="#hero">
           Perumahan YASha BSD
         </a>
       </div>
-      <div class="hidden md:flex gap-8 items-center font-serif tracking-tight text-sm uppercase font-semibold">
+      <div class="hidden md:flex gap-8 items-center font-serif tracking-tight text-xs uppercase font-semibold">
         <a class="text-emerald-800/70 dark:text-emerald-100/70 hover:text-amber-500 transition-colors duration-300"
           href="#spesifikasi">
           Spesifikasi
@@ -192,16 +193,38 @@
           href="#lokasi">
           Lokasi
         </a>
-        <a class="bg-primary-container text-white px-6 py-2 rounded-xl scale-95 active:scale-100 transition-transform hover:bg-[#153426]"
+        <a class="bg-primary-container text-white px-6 py-2 rounded-lg scale-95 active:scale-100 transition-transform hover:bg-[#153426]"
            href="https://wa.me/6281273457721?text=Halo%2C%20saya%20tertarik%20untuk%20mengetahui%20detail%20perumahan%20YASha%20BSD.%20Apakah%20unit%20masih%20tesedia%3F"
            target="_blank"
         >
           Hubungi Kami
         </a>
       </div>
-      <button class="md:hidden text-primary">
+      <button id="mobile-menu-button" class="md:hidden text-primary p-2 focus:outline-none">
         <span class="material-symbols-outlined" data-icon="menu">menu</span>
       </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 dark:bg-emerald-950 border-t border-white/10 shadow-lg absolute w-full left-0 top-full flex flex-col font-serif tracking-tight text-sm uppercase font-semibold">
+      <a class="px-6 py-4 border-b border-black/5 dark:border-white/5 text-emerald-800/70 dark:text-emerald-100/70 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        href="#spesifikasi">
+        Spesifikasi
+      </a>
+      <a class="px-6 py-4 border-b border-black/5 dark:border-white/5 text-emerald-800/70 dark:text-emerald-100/70 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        href="#fasilitas">
+        Fasilitas
+      </a>
+      <a class="px-6 py-4 border-b border-black/5 dark:border-white/5 text-emerald-800/70 dark:text-emerald-100/70 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        href="#lokasi">
+        Lokasi
+      </a>
+      <a class="px-6 py-4 text-emerald-800/70 dark:text-emerald-100/70 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+         href="https://wa.me/6281273457721?text=Halo%2C%20saya%20tertarik%20untuk%20mengetahui%20detail%20perumahan%20YASha%20BSD.%20Apakah%20unit%20masih%20tesedia%3F"
+         target="_blank"
+      >
+        Hubungi Kami
+      </a>
     </div>
   </nav>
 
@@ -213,7 +236,7 @@
       <div class="absolute inset-0 bg-gradient-to-r from-primary/70 to-primary/70"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
+      <div data-aos="fade-up" data-aos-duration="1000">
         <span
           class="inline-block py-2 px-4 rounded-full bg-amber-500 text-on-primary-fixed font-label-caps text-label-caps mb-6 shadow-md">
           TERSEDIA 2 UNIT
@@ -235,7 +258,7 @@
           </a>
           <a
             href="#spesifikasi"
-            class="border-2 border-amber-500 text-amber-500 px-8 py-4 rounded-xl font-bold hover:bg-amber-500/10 transition-all backdrop-blur-sm">
+            class="border-2 border-amber-500 flex items-center justify-center text-amber-500 px-8 py-4 rounded-xl font-bold hover:bg-amber-500/10 transition-all backdrop-blur-sm">
             Lihat Spesifikasi
           </a>
         </div>
@@ -245,51 +268,59 @@
 
   <!-- Kenapa YASha BSD -->
   <section class="py-24 max-w-7xl mx-auto px-6 bg-surface-container-lowest">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16" data-aos="fade-up">
       <h2 class="font-headline-md text-headline-md text-primary mb-4">Kenapa Perumahan YASha BSD?</h2>
       <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
     </div>
-    <div class="grid md:grid-cols-4 gap-8">
-      <div
+    <div class="grid gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
+      <div data-aos="fade-up" data-aos-delay="100"
         class="p-8 rounded-2xl bg-white shadow-md border-b-4 border-b-transparent hover:border-b-amber-500 border border-surface-container hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <div
-          class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container mb-6 shadow-inner">
-          <span class="material-symbols-outlined text-3xl" data-icon="house">house</span>
-        </div>
-        <h3 class="font-headline-md text-xl text-primary mb-3">Siap Huni</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Unit sudah jadi dan siap ditempati tanpa menunggu
-          masa pembangunan.</p>
+          <div class="mb-6 flex justify-center items-center md:justify-start">
+              <div class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container shadow-inner">
+                <span class="material-symbols-outlined text-3xl" data-icon="house">house</span>
+              </div>
+          </div>
+          <h3 class="justify-self-center font-headline-md text-xl text-primary mb-3 md:justify-self-start">
+            Siap Huni
+          </h3>
+          <p class="text-center text-on-surface-variant text-sm leading-relaxed md:text-left">
+            Unit sudah jadi dan siap ditempati tanpa menunggu
+            masa pembangunan.
+          </p>
       </div>
-      <div
+      <div data-aos="fade-up" data-aos-delay="200"
         class="p-8 rounded-2xl bg-white shadow-md border-b-4 border-b-transparent hover:border-b-amber-500 border border-surface-container hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <div
-          class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container mb-6 shadow-inner">
-          <span class="material-symbols-outlined text-3xl" data-icon="water_drop">water_drop</span>
+        <div class="mb-6 flex justify-center items-center md:justify-start">
+          <div class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container shadow-inner">
+            <span class="material-symbols-outlined text-3xl" data-icon="water_drop">water_drop</span>
+          </div>
         </div>
-        <h3 class="font-headline-md text-xl text-primary mb-3">Air Jernih</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Kualitas air sumur bor yang terjaga, jernih, dan
+        <h3 class="justify-self-center font-headline-md text-xl text-primary mb-3 md:justify-self-start">Air Jernih</h3>
+        <p class="text-center text-on-surface-variant text-sm leading-relaxed md:text-left">Kualitas air sumur bor yang terjaga, jernih, dan
           melimpah.</p>
       </div>
-      <div
+      <div data-aos="fade-up" data-aos-delay="300"
         class="p-8 rounded-2xl bg-white shadow-md border-b-4 border-b-transparent hover:border-b-amber-500 border border-surface-container hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <div
-          class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container mb-6 shadow-inner">
-          <span class="material-symbols-outlined text-3xl" data-icon="directions_car">directions_car</span>
+        <div class="mb-6 flex justify-center items-center md:justify-start">
+          <div class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container shadow-inner">
+            <span class="material-symbols-outlined text-3xl" data-icon="directions_car">directions_car</span>
+          </div>
         </div>
-        <h3 class="font-headline-md text-xl text-primary mb-3">Area Parkir</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">
+        <h3 class="justify-self-center font-headline-md text-xl text-primary mb-3 md:justify-self-start">Area Parkir</h3>
+        <p class="text-center text-on-surface-variant text-sm leading-relaxed md:text-left">
           Area parkir cocok untuk kendaraan roda dua, mobil, dan motor, memudahkan pengguna untuk berkendara dengan
           nyaman.
         </p>
       </div>
-      <div
+      <div data-aos="fade-up" data-aos-delay="400"
         class="p-8 rounded-2xl bg-white shadow-md border-b-4 border-b-transparent hover:border-b-amber-500 border border-surface-container hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <div
-          class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container mb-6 shadow-inner">
-          <span class="material-symbols-outlined text-3xl" data-icon="lock">lock</span>
+        <div class="mb-6 flex justify-center items-center md:justify-start">
+          <div class="w-16 h-16 bg-primary-fixed-dim/30 rounded-2xl flex items-center justify-center text-primary-container shadow-inner">
+            <span class="material-symbols-outlined text-3xl" data-icon="lock">lock</span>
+          </div>
         </div>
-        <h3 class="font-headline-md text-xl text-primary mb-3">Privasi Terjaga</h3>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Lingkungan tenang dan privat, jauh dari hiruk pikuk
+        <h3 class="justify-self-center font-headline-md text-xl text-primary mb-3 md:justify-self-start">Privasi Terjaga</h3>
+        <p class="text-center text-on-surface-variant text-sm leading-relaxed md:text-left">Lingkungan tenang dan privat, jauh dari hiruk pikuk
           kebisingan jalan utama.</p>
       </div>
     </div>
@@ -299,29 +330,29 @@
   <section class="py-24 bg-surface-container-low relative" id="spesifikasi">
     <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div class="relative group">
+        <div class="relative group" data-aos="fade-right">
           <div
             class="absolute inset-0 bg-primary/5 rounded-3xl transform rotate-3 group-hover:rotate-1 transition-transform duration-500 z-0">
           </div>
           <img alt="Interior ruang tamu rumah di Perumahan YASha BSD Muara Enim"
             class="rounded-3xl shadow-2xl w-full relative z-10 group-hover:-translate-y-1 transition-transform duration-500"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRsGn1rI4asm6Xn5WyeJYzFqw8AJuvaN4FnRd2SpUjYX6Nrl90bBORQoOdvb7GGgfCjXBuifP5qPDID9dHOii9NNNfcgGceBh5t0uKuQKKBaTp99wNZlbLgOii7dCBfQEJwUwRaB8U6kDTNdYjQL_AwIOVuBcbzaMHk3UP2Ae-UKeGOA1_HILeRaL34L4j5C-O4gKlSrOsbuRXP2O3zCkak1f8AQne5HGBYl5qfKToXmNxi9YE9JuWXBhidie6teeQZoMwJAB6s_Qk">
+            src="./ruangan.jpeg">
           <div
             class="absolute -bottom-8 -right-8 bg-amber-500 text-on-primary-fixed p-8 rounded-2xl shadow-xl z-20 hover:scale-105 transition-transform duration-300 border-2 border-white/20">
             <p class="font-headline-md text-3xl font-bold">52.5m²</p>
             <p class="font-label-caps uppercase text-xs mt-1">Luas Bangunan</p>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <h2 class="font-headline-md text-headline-md text-primary mb-8 border-l-4 border-amber-500 pl-4">Spesifikasi
             Eksklusif Unit</h2>
-          <div class="grid grid-cols-2 gap-x-6 gap-y-8">
+          <div class="grid grid-cols-2 gap-4 md:gap-8">
             <div
               class="flex flex-col gap-2 p-4 rounded-xl bg-white shadow-sm border border-surface-container hover:shadow-md transition-shadow">
               <div class="flex items-center gap-3 mb-1">
                 <span class="material-symbols-outlined text-amber-500 bg-amber-500/10 p-2 rounded-lg"
                   data-icon="bed">bed</span>
-                <p class="font-bold text-primary text-lg">2 KT</p>
+                <p class="font-bold text-primary text-sm">2 KT</p>
               </div>
               <p class="text-sm text-on-surface-variant">Kamar Tidur Utama &amp; Anak</p>
             </div>
@@ -330,7 +361,7 @@
               <div class="flex items-center gap-3 mb-1">
                 <span class="material-symbols-outlined text-amber-500 bg-amber-500/10 p-2 rounded-lg"
                   data-icon="bathroom">bathroom</span>
-                <p class="font-bold text-primary text-lg">1 KM</p>
+                <p class="font-bold text-primary text-sm">1 KM</p>
               </div>
               <p class="text-sm text-on-surface-variant">Kamar Mandi Modern</p>
             </div>
@@ -339,7 +370,7 @@
               <div class="flex items-center gap-3 mb-1">
                 <span class="material-symbols-outlined text-amber-500 bg-amber-500/10 p-2 rounded-lg"
                   data-icon="living">living</span>
-                <p class="font-bold text-primary text-lg">R. Tamu</p>
+                <p class="font-bold text-primary text-sm">R. Tamu</p>
               </div>
               <p class="text-sm text-on-surface-variant">Area Ruang Tamu</p>
             </div>
@@ -348,7 +379,7 @@
               <div class="flex items-center gap-3 mb-1">
                 <span class="material-symbols-outlined text-amber-500 bg-amber-500/10 p-2 rounded-lg"
                   data-icon="cooking">cooking</span>
-                <p class="font-bold text-primary text-lg">Dapur</p>
+                <p class="font-bold text-primary text-sm">Dapur</p>
               </div>
               <p class="text-sm text-on-surface-variant">Dapur Fungsional</p>
             </div>
@@ -357,7 +388,7 @@
               <div class="flex items-center gap-3 mb-1">
                 <span class="material-symbols-outlined text-amber-500 bg-amber-500/10 p-2 rounded-lg"
                   data-icon="local_laundry_service">local_laundry_service</span>
-                <p class="font-bold text-primary text-lg">Cuci/Jemur</p>
+                <p class="font-bold text-primary text-sm">Cuci/Jemur</p>
               </div>
               <p class="text-sm text-on-surface-variant">Area Cuci/Jemur Terbuka</p>
             </div>
@@ -366,7 +397,7 @@
               <div class="flex items-center gap-3 mb-1">
                 <span class="material-symbols-outlined text-amber-500 bg-amber-500/10 p-2 rounded-lg"
                   data-icon="directions_car">directions_car</span>
-                <p class="font-bold text-primary text-lg">Parkir</p>
+                <p class="font-bold text-primary text-sm">Parkir</p>
               </div>
               <p class="text-sm text-on-surface-variant">Area Parkir Mobil/Motor</p>
             </div>
@@ -385,7 +416,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-6">
-      <div class="max-w-2xl mx-auto text-center text-white mb-16">
+      <div class="max-w-2xl mx-auto text-center text-white mb-16" data-aos="fade-up">
         <span
           class="inline-block py-1 px-3 rounded-full border border-amber-500/50 text-amber-400 text-sm font-semibold tracking-wider uppercase mb-4 shadow-sm bg-primary/50 backdrop-blur-md">Kenyamanan
           Prioritas</span>
@@ -394,7 +425,7 @@
           pendukung hunian yang handal.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8 relative">
-        <div
+        <div data-aos="zoom-in" data-aos-delay="100"
           class="glass-effect p-12 rounded-3xl text-white flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 group border-t border-white/30 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
           <div
             class="w-20 h-20 rounded-full bg-amber-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
@@ -417,7 +448,7 @@
             </li>
           </ul>
         </div>
-        <div
+        <div data-aos="zoom-in" data-aos-delay="200"
           class="glass-effect p-12 rounded-3xl text-white flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 group border-t border-white/30 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
           <div
             class="w-20 h-20 rounded-full bg-amber-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 transition-all duration-300">
@@ -447,9 +478,9 @@
   <!-- Lokasi Strategis -->
   <section class="py-24 max-w-7xl mx-auto px-6 bg-surface-container-lowest" id="lokasi">
     <div class="grid md:grid-cols-5 gap-16 items-center">
-      <div class="md:col-span-2">
+      <div class="md:col-span-2" data-aos="fade-right">
         <h2 class="font-headline-md text-headline-md text-primary mb-6 relative">Lokasi Strategis</h2>
-        <p class="text-on-surface-variant mb-8 text-lg leading-relaxed">Berlokasi di jantung perkembangan Muara Enim,
+        <p class="text-on-surface-variant mb-8 text-lg leading-relaxed md:text-left">Berlokasi di jantung perkembangan Muara Enim,
           memudahkan mobilitas Anda ke pusat kota, sekolah, dan area komersial.</p>
         <div class="space-y-6 mb-10">
           <div
@@ -481,7 +512,7 @@
           BUKA DI GOOGLE MAPS
         </a>
       </div>
-      <div
+      <div data-aos="fade-left"
         class="md:col-span-3 h-[500px] bg-surface-container rounded-3xl overflow-hidden relative border-4 border-white shadow-2xl group">
         <img alt="Peta lokasi perumahan Muara Enim strategis"
           class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
@@ -525,7 +556,7 @@
   <!-- Footer CTA Section -->
   <section class="py-32 bg-white text-center relative overflow-hidden">
     <div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
+    <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="fade-up">
       <h2 class="font-headline-lg text-primary mb-6 leading-tight">Siap Melangkah ke Hunian <span
           class="text-amber-500">Baru Anda?</span></h2>
       <p class="text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto">Tim kami siap membantu Anda 24/7. Mari berdiskusi</p>
@@ -589,6 +620,34 @@
 <!--      class="absolute right-full mr-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white translate-x-1"-->
 <!--      style="border-width: 8px; border-style: solid; border-color: transparent transparent transparent white;"></span>-->
 <!--  </a>-->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+        if (mobileMenu.classList.contains('hidden')) {
+          icon.textContent = 'menu';
+        } else {
+          icon.textContent = 'close';
+        }
+      });
+
+    });
+  </script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      offset: 50,
+      duration: 800,
+      easing: 'ease-out-cubic',
+    });
+  </script>
 </body>
 
 </html>
